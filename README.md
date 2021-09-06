@@ -22,3 +22,19 @@ This document contains the following details:
 ### Description of the Topology
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+The loadbalancer is the only public interface that accept HTTP over TCP and it will be responsible for distributing incoming traffic to any VM in the loadbalancer backend pool.
+The Jumpbox is the only gateway to the webservers, SSH is limited to only trusted IP addresses.
+
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system logs.
++ Filebeat to watch log files and paths
++ Metricbeat to watch metrics from the operating system and from services running on the server
+
+The configuration details of each machine may be found below.
+| Name         | Function      | IP Address | Public IP Address | Operating System |            
+|--------------|---------------|------------|-------------------|------------------|
+| Jump Box     | Gateway       | 10.1.0.4   | 20.37.43.145      | Linux            |
+| Loadbalancer | Load Balancer | N/A        | 20.37.38.51       | N/A              |
+| Web-1        | Server        | 10.1.0.5   | N/A               | Linux            |
+| Web-2        | Server        | 10.1.0.6   | N/A               | Linux            |
+
+
