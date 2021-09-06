@@ -38,3 +38,9 @@ The configuration details of each machine may be found below.
 | Web-2        | Server        | 10.1.0.6   | N/A               | Linux            |
 
 
+### Access Policies
+
+The machines on the internal network are not exposed to the public Internet. 
+
+Only the Jump Box machine can accept connections from the Internet.
+Machines within the network can only be accessed by Jump-Box-Provisioner.
