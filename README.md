@@ -1,3 +1,5 @@
+# ELK Stack Deployment
+
 The files in this repository were used to configure the network depicted below.
 ![Rednet](https://raw.githubusercontent.com/MattVeall/Cyber_Security_Project1/main/Diagrams/Cyber%20Secuirty%20Project%20Network.png)
 
@@ -36,11 +38,64 @@ The configuration details of each machine may be found below.
 | Loadbalancer | Load Balancer | N/A        | 20.37.38.51       | N/A              |
 | Web-1        | Server        | 10.1.0.5   | N/A               | Linux            |
 | Web-2        | Server        | 10.1.0.6   | N/A               | Linux            |
-
+| ELK Server   | Server        | 10.0.0.4   | N/A               | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump Box machine can accept connections from the Internet.
+Only the Loadbalancer & Jump Box machine can accept connections from the Internet.
 Machines within the network can only be accessed by Jump-Box-Provisioner.
+
+A summary of the access policies in place can be found in the table below.
+
+| Name        | Publicly Accessible | Allowed IP Addresses |
+|-------------|---------------------|----------------------|
+| Jump Box    | No                  |                      |
+| Web-1       | No                  | 10.1.0.4             |
+| Web-2       | No                  | 10.1.0.4             |
+| ELK Server  | No                  | 10.1.0.4             |
+
+### Elk Configuration
+
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because implementation can be repeated consistently and across multipule machines.
+
+The playbook implements the following tasks:
++ Install docker.io, python3-pip, docker module
++ Increase virtual memory
++ Download and launch elk container
+
+The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+![image](https://user-images.githubusercontent.com/84116475/132267569-45490810-61c9-43cb-b443-10dbc95e28ad.png)
+
+Target Machines & Beats
+
+This ELK server is configured to monitor the following machines:
+
++ webservers hosts group (10.0.0.12, 10.0.0.13)
+
+We have installed the following Beats on these machines:
+
++ Filebeat
++ Metricbeat
+
+These Beats allow us to collect the following information from each machine:
+
++ Filebeat to watch log files (e.g. audit logs, server logs)
++ Metricbeat to watch metrics from the operating system and from services running on the server (e.g. docker container performance metrics)
+
+### Using the Playbook
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+
+SSH into the control node and follow the steps below:
+
++ Copy the install-elk.yml, filebeat-playbook.yml, metricbeat-playbook.yml to /etc/ansible/roles.
++ Create/update the hosts file to include groups of servers. In this instance we have webservers (add web server VMs here) and elk (add your ELK VM here).
++ Run each playbook targetting the correct groups defined in the hosts
+
+
+
+
+
+
+
