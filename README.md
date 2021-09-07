@@ -15,7 +15,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 These are files used during my setup. If you are intending to use these as a guide, you will need to make changes to your hosts, ansible config, tasks to run on your servers.
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
