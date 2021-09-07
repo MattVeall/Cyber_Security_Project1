@@ -73,7 +73,7 @@ Target Machines & Beats
 
 This ELK server is configured to monitor the following machines:
 
-+ webservers hosts group (10.0.0.12, 10.0.0.13)
++ webservers hosts group (10.1.0.5, 10.1.0.6)
 
 We have installed the following Beats on these machines:
 
