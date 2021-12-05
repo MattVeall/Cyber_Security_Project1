@@ -7,10 +7,10 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
 
-+ [Web Server Playbook](https://github.com/MattVeall/Cyber_Security_Project1/blob/main/Ansible/config-web-vm-with-docker.yml.txt)
-+ [ELK Server Playbook](https://github.com/MattVeall/Cyber_Security_Project1/blob/main/Ansible/install-elk.yml.txt)
-+ [File Beat Playbook](https://github.com/MattVeall/Cyber_Security_Project1/blob/main/Ansible/filebeat-playbook.yml.txt)
-+ [Metric Beat Playbook](https://github.com/MattVeall/Cyber_Security_Project1/blob/main/Ansible/metricbeat-playbook.yml.txt)
++ [Web Server Playbook](https://github.com/MattVeall/Cyber_Security_Project1/blob/main/Ansible/config-web-vm-with-docker.yml)
++ [ELK Server Playbook](https://github.com/MattVeall/Cyber_Security_Project1/blob/main/Ansible/install-elk.yml)
++ [File Beat Playbook](https://github.com/MattVeall/Cyber_Security_Project1/blob/main/Ansible/filebeat-playbook.yml)
++ [Metric Beat Playbook](https://github.com/MattVeall/Cyber_Security_Project1/blob/main/Ansible/metricbeat-playbook.yml)
 
 These are files used during my setup. If you are intending to use these as a guide, you will need to make changes to your hosts, ansible config, tasks to run on your servers.
 
